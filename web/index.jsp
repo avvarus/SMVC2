@@ -22,14 +22,17 @@
 
 
 <form action="/main/LoginServlet" method="get">
-
     <button type="submit">getDetails</button>
 </form>
 
 
 <form action="/main/SecondServlet" method="get">
+    Employer <input type="radio" value="Employer" name="typeEmp">
+    Employee <input type="radio" value="Employee" name="typeEmp">
 
     <button type="submit">getDetailsSecondServlet</button>
 </form>
+
+
 </body>
 </html>
