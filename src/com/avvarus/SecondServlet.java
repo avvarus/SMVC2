@@ -13,8 +13,8 @@ import java.util.Enumeration;
 
 @WebServlet(name = "SecondServlet",
           urlPatterns = {"/SecondServlet"},
-          initParams = {@WebInitParam(name = "Sujeeth", value = "Avvaru"),
-                    @WebInitParam(name = "Sushma", value = "Nalla")}
+          initParams = {@WebInitParam(name = "Seven", value = "Samurai"),
+                    @WebInitParam(name = "Twelve", value = "Angry Men")}
 )
 public class SecondServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,7 +42,10 @@ public class SecondServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         session.setAttribute("Name", "Hyderabad");
+        session.setMaxInactiveInterval(600);
+        session.getCreationTime();
 
         response.getWriter().println(session.getAttribute("Name"));
+        // request.getServerPort();
     }
 }
