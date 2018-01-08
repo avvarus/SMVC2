@@ -26,7 +26,7 @@
 </form>
 
 
-<form action="/main/SecondServlet" method="get">
+<form action="/main/SecondServlet" method="post">
     Employer <input type="radio" value="Employer" name="typeEmp">
     Employee <input type="radio" value="Employee" name="typeEmp">
 

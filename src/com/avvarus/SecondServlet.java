@@ -17,7 +17,20 @@ import java.util.Enumeration;
                     @WebInitParam(name = "Twelve", value = "Angry Men")}
 )
 public class SecondServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        service(request, response);
+
+    }
+
+    protected void service(HttpServletRequest request, HttpServletResponse response) {
+
+        try {
+            response.getWriter().println(request.getServerPort() + " " + response.getStatus());
+        } catch (IOException io) {
+            System.out.println(io.getCause());
+        }
 
     }
 
